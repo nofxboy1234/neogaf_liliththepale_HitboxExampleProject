@@ -1,0 +1,111 @@
+
+sHero.png
+size: 497,125
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HeroArmB1
+  rotate: false
+  xy: 408, 34
+  size: 16, 37
+  orig: 17, 38
+  offset: 1, 0
+  index: -1
+HeroArmF1
+  rotate: true
+  xy: 220, 26
+  size: 24, 33
+  orig: 25, 34
+  offset: 1, 0
+  index: -1
+HeroArmF2
+  rotate: false
+  xy: 256, 3
+  size: 34, 23
+  orig: 35, 24
+  offset: 1, 0
+  index: -1
+HeroHair
+  rotate: true
+  xy: 256, 29
+  size: 42, 83
+  orig: 43, 85
+  offset: 1, 0
+  index: -1
+HeroHead
+  rotate: false
+  xy: 438, 71
+  size: 59, 54
+  orig: 60, 56
+  offset: 1, 0
+  index: -1
+HeroLegB1
+  rotate: true
+  xy: 150, 34
+  size: 16, 67
+  orig: 18, 68
+  offset: 1, 0
+  index: -1
+HeroLegB2
+  rotate: true
+  xy: 73, 20
+  size: 17, 69
+  orig: 18, 70
+  offset: 1, 0
+  index: -1
+HeroLegF1
+  rotate: true
+  xy: 145, 14
+  size: 17, 67
+  orig: 19, 68
+  offset: 2, 1
+  index: -1
+HeroLegF2
+  rotate: true
+  xy: 3, 11
+  size: 26, 67
+  orig: 27, 68
+  offset: 1, 0
+  index: -1
+HeroNeck
+  rotate: true
+  xy: 293, 14
+  size: 12, 24
+  orig: 12, 26
+  offset: 0, 1
+  index: -1
+HeroShieldDown
+  rotate: true
+  xy: 150, 53
+  size: 72, 103
+  orig: 74, 105
+  offset: 1, 0
+  index: -1
+HeroShieldUp
+  rotate: true
+  xy: 256, 74
+  size: 51, 101
+  orig: 53, 103
+  offset: 2, 1
+  index: -1
+HeroSkirt
+  rotate: false
+  xy: 360, 74
+  size: 75, 51
+  orig: 78, 54
+  offset: 1, 1
+  index: -1
+HeroSword
+  rotate: true
+  xy: 3, 40
+  size: 85, 144
+  orig: 88, 146
+  offset: 2, 1
+  index: -1
+HeroTorso
+  rotate: true
+  xy: 342, 33
+  size: 38, 63
+  orig: 40, 64
+  offset: 1, 0
+  index: -1
