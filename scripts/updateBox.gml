@@ -1,6 +1,8 @@
 /// updateBox(box id)
 
-with (argument0) {
+var box_id = argument0;
+
+with (box_id) {
   x = daddy.x+xOffset;
   y = daddy.y+yOffset;
 }

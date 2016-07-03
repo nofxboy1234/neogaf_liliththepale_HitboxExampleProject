@@ -100,9 +100,14 @@ if (grounded > 4 && k.iAttack > 0 && k.iAttack < 8) {
   dy = 0;
   state = BLOCK;
   ani("shield");
-  myBlockbox = doBlockbox(x+25*image_xscale, y-120, x+40*image_xscale, y-70);
-}
 
+  last_blockbox_x1 = x+25*image_xscale;
+  last_blockbox_y1 = y-120;
+  last_blockbox_x2 = x+40*image_xscale;
+  last_blockbox_y2 = y-70;
+  myBlockbox = doBlockbox(last_blockbox_x1, last_blockbox_y1,
+                          last_blockbox_x2, last_blockbox_y2);
+}
 updateBox(myHurtbox);
 
 } //-
@@ -112,9 +117,16 @@ updateBox(myHurtbox);
 if (state == ATTACK) { //-
 
 if (image_index == 14) {
+
+  last_hitbox_x1 = x+20*image_xscale;
+  last_hitbox_y1 = y-110;
+  last_hitbox_x2 = x+128*image_xscale;
+  last_hitbox_y2 = y-90;
   // hit box lasts for 16 frames and deals 1 damage.
   // width = 108, height = 20
-  myHitbox = doHitbox(x+20*image_xscale, y-110, x+128*image_xscale, y-90, 16, 1);
+  myHitbox = doHitbox(last_hitbox_x1, last_hitbox_y1,
+                      last_hitbox_x2, last_hitbox_y2,
+                      16, 1);
 }
 
 } //-

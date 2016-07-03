@@ -2,6 +2,7 @@
 
 if (keyboard_check(ord("Z")) || keyboard_check(vk_up) || gamepad_button_check(0, gp_face1)) {
   iJump += 1;
+  k.x_pressed = true;
 } else if (iJump > 0) {
   iJump = -1;
 } else {
@@ -10,6 +11,7 @@ if (keyboard_check(ord("Z")) || keyboard_check(vk_up) || gamepad_button_check(0,
 
 if (keyboard_check(ord("X")) || keyboard_check(vk_space) || gamepad_button_check(0, gp_face3)) {
   iAttack += 1;
+  k.square_pressed = true;
 } else if (iAttack > 0) {
   iAttack = -1;
 } else {
@@ -18,6 +20,7 @@ if (keyboard_check(ord("X")) || keyboard_check(vk_space) || gamepad_button_check
 
 if (keyboard_check(ord("C")) || keyboard_check(vk_shift) || gamepad_button_check(0, gp_face2)) {
   iBlock += 1;
+  k.circle_pressed = true;
 } else if (iBlock > 0) {
   iBlock = -1;
 } else {

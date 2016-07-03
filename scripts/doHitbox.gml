@@ -1,8 +1,8 @@
 /// doHitbox(x1, y1, x2, y2, duration, damage)
 // purple
 
-x1 = argument0;
-y1 = argument1;
+var x1 = argument0;
+var y1 = argument1;
 
 with (instance_create(x1, y1, hitbox)) {
   x1 = argument0;

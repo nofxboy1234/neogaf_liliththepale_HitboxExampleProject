@@ -17,3 +17,7 @@ iBlock = 0;
 iLeft = 0;
 iRight = 0;
 iEscape = 0;
+
+x_pressed = false;
+square_pressed = false;
+circle_pressed = false;
