@@ -21,12 +21,12 @@ if ((dieTime != 0 && dieTime <= k.time) || !instance_exists(daddy)) {
   exit;
 }
 
-// Step through all the colidable objects, and run the below code
+// Step through all the collidable objects, and run the below code
 // from their point of view.
 with (c) {
   // If this hitbox (other - this object) is colliding with a collidable object(c) e.g. oGround
   if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, other.id, false, false)) {
-    // Get the x value of the middle of the collidable
+    // Get the halfway x-value of this hitbox
     _x = mean(l, r);
     // If this hitbox is to the right
     if (other.bbox_left >= bbox_left) {
@@ -41,7 +41,8 @@ with (c) {
       r = min(other.bbox_right, bbox_left-1);
       _x = r;
     }
-    // Get the y value of the middle of the collidable
+
+    // Get the halfway y-value of this hitbox
     _y = mean(other.bbox_top, other.bbox_bottom);
     // with this hitbox's parent e.g. oHero
     with (other.daddy) {
@@ -51,24 +52,45 @@ with (c) {
       // hit box interrupted signal
       event_user(3);
     }
-    // If this hitbox is outside the collidable's 1 pixel bbox buffer (e.g. oGround))
+
+    // If this hitbox is penetrating the collidable's 1 pixel bbox buffer (e.g. oGround))
+    // This hitbox is either to the right, and it's left edge is inside the collidable
+    // or this hitbox is to the left, and it's right edge is inside the collidable.
     if (l != other.bbox_left || r != other.bbox_right) {
       with (other) {
-        // Make the hitbox's x value equal to it's current x value on this frame, OR finally - the collidable's x with 1 pixel buffer.
+        // if (daddy.id == oHero.id) {
+        //   daddy.code_check = 0;
+        // }
+
+        // If there is NO collision: Make the hitbox's x value equal to it's current bbox_left value on this frame.
+        // If there IS a collision and the hitbox is to the right: The hitbox's x value will be its bbox_left or the collidable's bbox_right+1, its r will stay the same.
+        // If there IS a collision and the hitbox is to the left: The hitbox's x value will be its bbox_left (l will stay the same), its r will be its bbox_right or the collidable's bbox_left-1.
+
+        // The hitbox x-value detemines it's position, and the r value will be adjusted accordingly.
         x = l;
-        // Shrink this hitbox and leave a gap of 1 pixel between it and the collidable
+        // Scale this hitbox and leave a gap of 1 pixel between it and the collidable
         image_xscale = (r-l)/32;
       }
-      // If after shrinking the hitbox, it is inside the collidable
+
+      // If after scaling the hitbox, it is completely inside the collidable
       if (l >= r) {
-      // Destroy this hitbox
+        // if (other.daddy.id == oHero.id) {
+        //   other.daddy.code_check = 1;
+        // }
+
+      // Destroy this hitbox immediately without letting it complete its lifetime.
         with (other) {
           instance_destroy();
         }
       }
     } else {
-      // This hitbox is completely inside the collidable's 1 pixel bbox buffer (e.g. oGround))
-      // Destroy the hitbox
+      // if (other.daddy.id == oHero.id) {
+      //   other.daddy.code_check = 2;
+      // }
+
+      // The hitbox is right up against the collidable's 1 pixel bbox buffer.
+      // Destroy the hitbox without scaling it.
+      // I don't think this ever executes because it seems that this is not a collision in GMS.
       with (other) {
         instance_destroy();
       }

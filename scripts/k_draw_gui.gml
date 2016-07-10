@@ -49,23 +49,29 @@ if (debug) {
         draw_text(start_x, 32*3, "oHero.last_hitbox_x2 = " + string(oHero.last_hitbox_x2));
         draw_text(start_x, 32*4, "oHero.last_hitbox_y2 = " + string(oHero.last_hitbox_y2));
 
+        draw_text(start_x, 32*5, "oHero.code_check = " + string(oHero.code_check));
+
         draw_set_color($FF5F00);
 
-        draw_text(start_x, 32*5, "oHero.last_blockbox_x1 = " + string(oHero.last_blockbox_x1));
-        draw_text(start_x, 32*6, "oHero.last_blockbox_y1 = " + string(oHero.last_blockbox_y1));
-        draw_text(start_x, 32*7, "oHero.last_blockbox_x2 = " + string(oHero.last_blockbox_x2));
-        draw_text(start_x, 32*8, "oHero.last_blockbox_y2 = " + string(oHero.last_blockbox_y2));
+        draw_text(start_x, 32*6, "oHero.last_blockbox_x1 = " + string(oHero.last_blockbox_x1));
+        draw_text(start_x, 32*7, "oHero.last_blockbox_y1 = " + string(oHero.last_blockbox_y1));
+        draw_text(start_x, 32*8, "oHero.last_blockbox_x2 = " + string(oHero.last_blockbox_x2));
+        draw_text(start_x, 32*9, "oHero.last_blockbox_y2 = " + string(oHero.last_blockbox_y2));
 
         draw_set_color($00FF3F);
 
         if (instance_exists(oHero.myHurtbox))
         {
-            draw_text(start_x, 32*9, "oHero.hurtbox_x1 = " + string(oHero.myHurtbox.x-32));
-            draw_text(start_x, 32*10, "oHero.hurtbox_y1 = " + string(oHero.myHurtbox.y-128));
-            draw_text(start_x, 32*11, "oHero.hurtbox_x2 = " + string(oHero.myHurtbox.x));
-            draw_text(start_x, 32*12, "oHero.hurtbox_y2 = " + string(oHero.myHurtbox.y));
+            draw_text(start_x, 32*10, "oHero.hurtbox_x1 = " + string(oHero.myHurtbox.x-32));
+            draw_text(start_x, 32*11, "oHero.hurtbox_y1 = " + string(oHero.myHurtbox.y-128));
+            draw_text(start_x, 32*12, "oHero.hurtbox_x2 = " + string(oHero.myHurtbox.x));
+            draw_text(start_x, 32*13, "oHero.hurtbox_y2 = " + string(oHero.myHurtbox.y));
         }
     }
+
+    draw_set_color(c_teal);
+    draw_text(start_x, 32*14, "k.time = " + string(k.time));
+
 
     // if (k.x_pressed)
     // {

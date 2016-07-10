@@ -122,7 +122,7 @@ if (image_index == 14) {
   last_hitbox_y1 = y-110;
   last_hitbox_x2 = x+128*image_xscale;
   last_hitbox_y2 = y-90;
-  // hit box lasts for 16 frames and deals 1 damage.
+  // hitbox lasts for 16 frames and deals 1 damage.
   // width = 108, height = 20
   myHitbox = doHitbox(last_hitbox_x1, last_hitbox_y1,
                       last_hitbox_x2, last_hitbox_y2,

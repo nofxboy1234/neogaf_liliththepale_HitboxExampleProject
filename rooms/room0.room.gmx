@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>1152</height>
-  <vsnap>64</vsnap>
-  <hsnap>64</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -16,9 +16,9 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
-    <h>600</h>
-    <showGrid>0</showGrid>
+    <w>1936</w>
+    <h>1056</h>
+    <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
     <showBackgrounds>-1</showBackgrounds>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>126</xoffset>
-    <yoffset>982</yoffset>
+    <xoffset>-49</xoffset>
+    <yoffset>456</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -54,7 +54,7 @@
     <instance objName="oGround" x="0" y="0" name="inst_6CE35EBE" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="1088" name="inst_CEEF3EE2" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1984" y="0" name="inst_957146B3" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="oHero" x="256" y="1088" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oHero" x="320" y="1088" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="832" name="inst_ECA54F5F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="448" y="960" name="inst_E899DAAE" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="704" y="896" name="inst_29ECCB6E" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>

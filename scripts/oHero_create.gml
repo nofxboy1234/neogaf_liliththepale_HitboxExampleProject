@@ -1,4 +1,5 @@
 /// initiate variables
+x += 0.5;
 
 dx = 0;
 dy = 0;
@@ -30,3 +31,5 @@ last_blockbox_y1 = -1;
 last_blockbox_x2 = -1;
 last_blockbox_y2 = -1;
 myBlockbox = noone;
+
+code_check = -1;
