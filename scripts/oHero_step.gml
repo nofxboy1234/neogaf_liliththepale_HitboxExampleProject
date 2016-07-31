@@ -1,5 +1,3 @@
-code_check = "main";
-
 /// NORMAL state
 if (state == NORM)
 { //-

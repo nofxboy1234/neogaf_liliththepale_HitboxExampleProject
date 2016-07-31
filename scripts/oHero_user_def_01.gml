@@ -1,4 +1,6 @@
-/// hitbox damaged
+/// hurtbox damaged
+
+code_check = "hurtbox damaged";
 
 ani("flinch");
 state = STUN;

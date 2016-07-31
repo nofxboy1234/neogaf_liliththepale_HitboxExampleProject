@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>1008</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>-240</xoffset>
-    <yoffset>283</yoffset>
+    <page>1</page>
+    <xoffset>31</xoffset>
+    <yoffset>446</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -54,7 +54,7 @@
     <instance objName="oGround" x="0" y="0" name="inst_6CE35EBE" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="1088" name="inst_CEEF3EE2" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1984" y="0" name="inst_957146B3" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="oHero" x="320" y="1088" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oHero" x="448" y="1088" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="832" name="inst_ECA54F5F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="704" y="896" name="inst_29ECCB6E" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1088" y="960" name="inst_B1BBAA5C" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
@@ -63,7 +63,7 @@
     <instance objName="oGround" x="576" y="576" name="inst_1EF3E9A3" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="896" y="1024" name="inst_5ACF2563" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="k" x="128" y="64" name="inst_5A2AB86E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oMonster" x="768" y="896" name="inst_DD775038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oMonster" x="864" y="896" name="inst_DD775038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oMonster" x="768" y="576" name="inst_14397308" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="1280" y="1024" name="inst_3A47B992" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="1664" y="1024" name="inst_B8C0EC66" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
