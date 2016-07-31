@@ -217,18 +217,22 @@ if (state == NORM)
   }
 
   // attack / block
+  // If on the ground AND attack has been pressed for 1 -> 7 frames
   if (grounded > 4 && k.iAttack > 0 && k.iAttack < 8)
   {
     state = ATTACK;
     ani("attack");
   }
+  // If on the ground and block has been pressed for 1 frame or more
   else if (grounded > 4 && k.iBlock > 0)
   {
+    // Stop any horiz orvert movement
     dx = 0;
     dy = 0;
     state = BLOCK;
     ani("shield");
 
+    // Create a block box
     last_blockbox_x1 = x+25*image_xscale;
     last_blockbox_y1 = y-120;
     last_blockbox_x2 = x+40*image_xscale;
@@ -236,11 +240,11 @@ if (state == NORM)
     myBlockbox = doBlockbox(last_blockbox_x1, last_blockbox_y1,
                             last_blockbox_x2, last_blockbox_y2);
   }
+  // Update position of the oHero's hurtbox
   updateBox(myHurtbox);
 } //-
 
 /// ATTACK state
-
 if (state == ATTACK)
 { //-
   if (image_index == 14)
@@ -274,6 +278,9 @@ if (state == BLOCK)
   {
     state = NORM;
     dy = 0;
+    // boolean math checking if left and/or right are being pressed
+    // e.g. true - true, 1-1 = 0, will stop horiz movement because
+    // both left and right are being pressed.
     dt = (k.iRight > 0)-(k.iLeft > 0);
     if (dt == NONE)
     {
