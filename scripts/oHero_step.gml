@@ -1,3 +1,5 @@
+code_check = "main";
+
 /// NORMAL state
 if (state == NORM)
 { //-
@@ -78,7 +80,6 @@ if (state == NORM)
   }
   else
   {
-    code_check = 1;
     dx = dx/2;
     if (dx < 0.1)
     {
@@ -89,30 +90,51 @@ if (state == NORM)
   x += dx;
 
   // handle horizontal collision
-  with (collision_rectangle(x-15, y-120, x+15, y-5, c, false, false))
+  // returns the object colliding with oHero.h_col_rect, e.g. c
+  h_col_rect_x1 = x-15;
+  h_col_rect_y1 = y-120;
+  h_col_rect_x2 = x+15;
+  h_col_rect_y2 = y-5;
+
+  hc_object = collision_rectangle(h_col_rect_x1, h_col_rect_y1,
+                                 h_col_rect_x2, h_col_rect_y2,
+                                 c, false, false);
+
+  with (hc_object)
   {
+    other.code_check = "horizontal col";
     // If oHero's x value on the previous frame was to the right of
     // the collision rect's right edge
     if (other.xprevious > bbox_right)
     {
+      // keep oHero 15 pixels to the right of hc_object (against hc_object)
       other.x = bbox_right+15;
     }
+    // If oHero's x value on the previous frame was to the left of
+    // the collision rect's left edge
     else if (other.xprevious < bbox_left)
     {
+      // keep oHero 15 pixels to the left of hc_object (against hc_object)
       other.x = bbox_left-15;
     }
   }
 
   // jump
+  // If on the ground AND jump has been pressed 1 -> 7 frames
   if (grounded > 0 && k.iJump > 0 && k.iJump < 8)
   {
+    // not on the ground
     grounded = 0;
+    // Move up 18 pixels each frame
     dy = -18;
     canJumpCancel = true;
+    // Set animation to "jump"
     ani("jump");
   }
+  // If in the air AND jump is not being pressed AND moving up
   else if (canJumpCancel && k.iJump == -1 && dy < 0)
   {
+    // halve the moving up speed each frame
     dy /= 2;
     canJumpCancel = false;
   }
@@ -120,25 +142,56 @@ if (state == NORM)
   y += dy;
 
   // handle vertical collision
-  with (collision_rectangle(x-13, y-120, x+13, y-100, c, false, false))
+  vt_col_rect_x1 = x-13;
+  vt_col_rect_y1 = y-120;
+  vt_col_rect_x2 = x+13;
+  vt_col_rect_y2 = y-100;
+
+  vc_top_object = collision_rectangle(vt_col_rect_x1, vt_col_rect_y1,
+                                 vt_col_rect_x2, vt_col_rect_y2,
+                                 c, false, false);
+
+  with (vc_top_object)
   {
+    other.code_check = "vertical top col";
+    // with oHero
     with (other)
     {
+      // oHero.y = vc_top_object.bbox_bottom+120
+      // Move oHero so that it's top is touching the bottom of the
+      // vc_top_object.
       y = other.bbox_bottom+120;
+      // halve the moving up speed each frame
       dy /= 2;
     }
   }
 
-  // when on the ground
-  with (collision_rectangle(x-13, y, x+13, y+2, c, false, false))
+  vb_col_rect_x1 = x-13;
+  vb_col_rect_y1 = y;
+  vb_col_rect_x2 = x+13;
+  vb_col_rect_y2 = y+2;
+
+  vc_bot_object = collision_rectangle(vb_col_rect_x1, vb_col_rect_y1,
+                                 vb_col_rect_x2, vb_col_rect_y2,
+                                 c, false, false);
+
+  with (vc_bot_object)
   {
+    other.code_check = "vertical bot col";
+    // with oHero
     with (other)
     {
       grounded = 6;
+      // If oHero's y value (origin at feet) on the previous frame was higher than
+      // the collision rect's top edge
       if (yprevious < other.bbox_top)
       {
+        // Move oHero so that it's bottom is touching the top of the
+        // vc_bot_object.
         y = other.bbox_top;
+        // oHero up movement = 0
         dy = 0;
+        // If oHero is not moving right or left
         if (dt == NONE)
         {
           ani("idle");

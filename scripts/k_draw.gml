@@ -9,16 +9,62 @@ if (debug) {
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
   }
   // green
-  draw_set_color($00FF3F);
-  with (hurtbox) {
+  // draw_set_color($00FF3F);
+  // with (hurtbox) {
+  //   draw_set_alpha(0.2);
+  //   draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+  //   draw_set_alpha(1);
+  //   draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+  // }
+  // purple
+  draw_set_color($FF007F);
+  with (hitbox) {
     draw_set_alpha(0.2);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
     draw_set_alpha(1);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
   }
-  // purple
-  draw_set_color($FF007F);
-  with (hitbox) {
+  // orange
+  draw_set_color(c_orange);
+  with(oHero)
+  {
+    draw_set_alpha(0.2);
+    draw_rectangle(h_col_rect_x1, h_col_rect_y1, h_col_rect_x2, h_col_rect_y2, false);
+    draw_set_alpha(1.0);
+    draw_rectangle(h_col_rect_x1, h_col_rect_y1, h_col_rect_x2, h_col_rect_y2, true);
+  }
+
+  with (oHero.hc_object) {
+    draw_set_alpha(0.2);
+    draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+    draw_set_alpha(1);
+    draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+  }
+
+  // red
+  draw_set_color(c_red);
+  with(oHero)
+  {
+    draw_set_alpha(0.2);
+    draw_rectangle(vt_col_rect_x1, vt_col_rect_y1, vt_col_rect_x2, vt_col_rect_y2, false);
+    draw_set_alpha(1.0);
+    draw_rectangle(vt_col_rect_x1, vt_col_rect_y1, vt_col_rect_x2, vt_col_rect_y2, true);
+
+    draw_set_alpha(0.2);
+    draw_rectangle(vb_col_rect_x1, vb_col_rect_y1, vb_col_rect_x2, vb_col_rect_y2, false);
+    draw_set_alpha(1.0);
+    draw_rectangle(vb_col_rect_x1, vb_col_rect_y1, vb_col_rect_x2, vb_col_rect_y2, true);
+  }
+
+  with (oHero.vc_top_object)
+  {
+    draw_set_alpha(0.2);
+    draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+    draw_set_alpha(1);
+    draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+  }
+  with (oHero.vc_bot_object)
+  {
     draw_set_alpha(0.2);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
     draw_set_alpha(1);

@@ -9,17 +9,17 @@ if (debug) {
 
     //  room_speed: the number of game steps that GameMaker: Studio will TRY to
     //  maintain each second.
-    draw_text(32, 32*1, "room_speed = " + string(room_speed));
+    // draw_text(32, 32*1, "room_speed = " + string(room_speed));
 
     //  fps: the number of CPU steps that GameMaker: Studio is actually completing
     //  in a second, CAPPED at the room_speed.
-    draw_text(32, 32*2, "fps = " + string(fps));
+    // draw_text(32, 32*2, "fps = " + string(fps));
 
     //  fps_real: the number of CPU steps that GameMaker: Studio is ACTUALLY completing
     //  in a second (the real fps), and this value is generally MUCH HIGHER
     //  than the room_speed, but will drop as your game gets more complex and uses
     //  more processing power to maintain the set room speed.
-    draw_text(32, 32*3, "fps_real = " + string_format(fps_real, 3, 12));
+    // draw_text(32, 32*3, "fps_real = " + string_format(fps_real, 3, 12));
 
     // delta_time is the time that has passed between this CPU step and the last.
     // In Love2d, dt is measured in seconds
@@ -36,8 +36,8 @@ if (debug) {
     // // ideal_frame_rate for semi-fixed timestep, see:
     // // (http://gafferongames.com/game-physics/fix-your-timestep/)
 
-    draw_text(32, 32*4, "delta_time = " + string(delta_time));
-    draw_text(32, 32*5, "dt = " + string_format(dt, 3, 12));
+    // draw_text(32, 32*4, "delta_time = " + string(delta_time));
+    // draw_text(32, 32*5, "dt = " + string_format(dt, 3, 12));
 
     if (instance_exists(oHero))
     {
