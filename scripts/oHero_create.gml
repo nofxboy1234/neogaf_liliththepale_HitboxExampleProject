@@ -3,7 +3,9 @@ x += 0.5;
 
 dx = 0;
 dy = 0;
+// distance over time (speed)
 dt = NONE;
+
 grounded = true;
 canJumpCancel = false;
 

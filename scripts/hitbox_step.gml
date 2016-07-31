@@ -62,7 +62,7 @@ with (c) {
         //   daddy.code_check = 0;
         // }
 
-        // If there is NO collision: Make the hitbox's x value equal to it's current bbox_left value on this frame.
+        // If there is NO collision: Then the hitbox's x value will be equal to it's current bbox_left value on this frame (Set around line 3).
         // If there IS a collision and the hitbox is to the right: The hitbox's x value will be its bbox_left or the collidable's bbox_right+1, its r will stay the same.
         // If there IS a collision and the hitbox is to the left: The hitbox's x value will be its bbox_left (l will stay the same), its r will be its bbox_right or the collidable's bbox_left-1.
 
@@ -72,7 +72,7 @@ with (c) {
         image_xscale = (r-l)/32;
       }
 
-      // If after scaling the hitbox, it is completely inside the collidable
+      // If after scaling the hitbox, it is COMPLETELY inside the collidable
       if (l >= r) {
         // if (other.daddy.id == oHero.id) {
         //   other.daddy.code_check = 1;
@@ -146,13 +146,3 @@ if (!blocked) {
     }
   }
 }
-
-// if (other == oHero)
-// {
-//   draw_text(32, 32*1, "oHero.hitbox.l = " + string(l));
-//   // draw_text(32, 32*2, "fps = " + string(fps));
-// }
-
-// draw_set_colour(c_red)
-// draw_text(32, 32*1, "oHero.hitbox.l = " + string(l));
-// draw_text(32, 32*2, "fps = " + string(fps));
