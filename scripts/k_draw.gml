@@ -48,18 +48,39 @@ if (debug) {
   {
     with(oMonster)
     {
+      draw_set_color(c_yellow);
       draw_set_alpha(0.2);
       draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, false);
       draw_set_alpha(1.0);
       draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, true);
 
+      draw_set_color(c_teal);
       draw_set_alpha(0.2);
       draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, false);
       draw_set_alpha(1.0);
       draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, true);
 
+      draw_set_color(c_lime);
+      draw_set_alpha(0.2);
+      draw_rectangle(c_object_03_x1, c_object_03_y1, c_object_03_x2, c_object_03_y2, false);
+      draw_set_alpha(1.0);
+      draw_rectangle(c_object_03_x1, c_object_03_y1, c_object_03_x2, c_object_03_y2, true);
+
+      draw_set_color(c_maroon);
+      draw_set_alpha(0.2);
+      draw_rectangle(c_object_04_x1, c_object_04_y1, c_object_04_x2, c_object_04_y2, false);
+      draw_set_alpha(1.0);
+      draw_rectangle(c_object_04_x1, c_object_04_y1, c_object_04_x2, c_object_04_y2, true);
+
+      draw_set_color(c_fuchsia);
+      draw_set_alpha(0.2);
+      draw_rectangle(c_object_05_x1, c_object_05_y1, c_object_05_x2, c_object_05_y2, false);
+      draw_set_alpha(1.0);
+      draw_rectangle(c_object_05_x1, c_object_05_y1, c_object_05_x2, c_object_05_y2, true);
+
       with (c_object_01)
       {
+        draw_set_color(c_yellow);
         draw_set_alpha(0.2);
         draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
         draw_set_alpha(1);
@@ -68,6 +89,31 @@ if (debug) {
 
       with (c_object_02)
       {
+        draw_set_color(c_teal);
+        draw_set_alpha(0.2);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+        draw_set_alpha(1);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      }
+      with (c_object_03)
+      {
+        draw_set_color(c_lime);
+        draw_set_alpha(0.2);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+        draw_set_alpha(1);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      }
+      with (c_object_04)
+      {
+        draw_set_color(c_maroon);
+        draw_set_alpha(0.2);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+        draw_set_alpha(1);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      }
+      with (c_object_05)
+      {
+        draw_set_color(c_fuchsia);
         draw_set_alpha(0.2);
         draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
         draw_set_alpha(1);

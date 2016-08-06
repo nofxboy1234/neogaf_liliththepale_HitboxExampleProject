@@ -13,6 +13,6 @@ camTrueY = (camY+view_yview*3)/4;
 view_xview = round(camTrueX);
 view_yview = floor(camTrueY);
 
-instance_deactivate_all(true);
-instance_activate_region(view_xview-100, view_yview-100, view_wview+200, view_hview+200, true);
-instance_activate_object(oHero);
+// instance_deactivate_all(true);
+// instance_activate_region(view_xview-100, view_yview-100, view_wview+200, view_hview+200, true);
+// instance_activate_object(oHero);

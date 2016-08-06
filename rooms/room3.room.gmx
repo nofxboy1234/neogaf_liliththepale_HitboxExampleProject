@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-150</xoffset>
-    <yoffset>-110</yoffset>
+    <xoffset>-230</xoffset>
+    <yoffset>-55</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -54,16 +54,15 @@
     <instance objName="oGround" x="0" y="0" name="inst_6CE35EBE" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="1088" name="inst_CEEF3EE2" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1984" y="0" name="inst_957146B3" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="oHero" x="448" y="1088" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oHero" x="288" y="192" name="inst_647E0361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="64" y="832" name="inst_ECA54F5F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="704" y="896" name="inst_29ECCB6E" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1088" y="960" name="inst_B1BBAA5C" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1408" y="832" name="inst_287C3D19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGround" x="1088" y="704" name="inst_DEE6F656" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGround" x="1088" y="576" name="inst_DEE6F656" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="576" y="576" name="inst_1EF3E9A3" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="896" y="1024" name="inst_5ACF2563" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="k" x="128" y="64" name="inst_5A2AB86E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oMonster" x="864" y="896" name="inst_DD775038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="1280" y="1024" name="inst_3A47B992" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSpikes" x="1664" y="1024" name="inst_B8C0EC66" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="128" y="640" name="inst_EEA92A8E" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
@@ -71,16 +70,19 @@
     <instance objName="oGround" x="256" y="384" name="inst_CE16C657" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="448" y="256" name="inst_1A23AA12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="704" y="256" name="inst_DBC0B222" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGround" x="1216" y="384" name="inst_6A370C9A" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="1408" y="320" name="inst_5CEB7947" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGround" x="1280" y="384" name="inst_6A370C9A" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1600" y="704" name="inst_CEA2D494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1792" y="640" name="inst_E82CF259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1856" y="512" name="inst_FD8469A2" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="1920" y="384" name="inst_E943F5D2" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="1152" y="640" name="inst_32F71D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSpikes" x="1440" y="320" name="inst_32F71D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="192" y="704" name="inst_5589158E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="320" y="896" name="inst_BFA1D5E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGround" x="640" y="1024" name="inst_13E11A30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oMonster" x="736" y="576" name="inst_F8D0400C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGround" x="896" y="576" name="inst_768B8E5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGround" x="960" y="576" name="inst_DC4E5CF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGround" x="960" y="416" name="inst_F38306F8" locked="0" code="" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
