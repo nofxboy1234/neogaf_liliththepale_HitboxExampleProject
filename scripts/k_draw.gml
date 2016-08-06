@@ -26,6 +26,7 @@ if (debug) {
   }
   // orange
   draw_set_color(c_orange);
+  // This rect is always drawn.
   with(oHero)
   {
     draw_set_alpha(0.2);
@@ -34,11 +35,45 @@ if (debug) {
     draw_rectangle(h_col_rect_x1, h_col_rect_y1, h_col_rect_x2, h_col_rect_y2, true);
   }
 
+  // This rect is ONLY drawn when a collision happens, and will be the colliding object.
+  // Otherwise hc_object doesn't exsit until a collision occurs.
   with (oHero.hc_object) {
     draw_set_alpha(0.2);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
     draw_set_alpha(1);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+  }
+
+  if (instance_exists(oMonster))
+  {
+    with(oMonster)
+    {
+      draw_set_alpha(0.2);
+      draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, false);
+      draw_set_alpha(1.0);
+      draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, true);
+
+      draw_set_alpha(0.2);
+      draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, false);
+      draw_set_alpha(1.0);
+      draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, true);
+
+      with (c_object_01)
+      {
+        draw_set_alpha(0.2);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+        draw_set_alpha(1);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      }
+
+      with (c_object_02)
+      {
+        draw_set_alpha(0.2);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+        draw_set_alpha(1);
+        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      }
+    }
   }
 
   // red
@@ -81,6 +116,7 @@ if (debug) {
   draw_text(oHero.x, oHero.y+(4*16)+text_offset, "dt: " + string(oHero.dt));
   draw_text(oHero.x, oHero.y+(5*16)+text_offset, "grounded: " + string(oHero.grounded));
   draw_text(oHero.x, oHero.y+(6*16)+text_offset, "canJumpCancel: " + string(oHero.canJumpCancel));
+  // draw_text(oHero.x, oHero.y+(7*16)+text_offset, "code_check: " + string(oHero.code_check));
   draw_text(oHero.x, oHero.y+(7*16)+text_offset, "code_check: " + string(oHero.code_check));
   draw_text(oHero.x, oHero.y+(8*16)+text_offset, "k.iJump: " + string(k.iJump));
   draw_text(oHero.x, oHero.y+(9*16)+text_offset, "k.iAttack: " + string(k.iAttack));
@@ -94,6 +130,13 @@ if (debug) {
   draw_text(oHero.x, oHero.y+(15*16)+text_offset, "state: " + string(oHero.state));
 
   draw_text(oHero.x, oHero.y+(16*16)+text_offset, "animation: " + string(oHero.animation));
+
+  // Draw oMonster properties
+  text_offset = -50;
+  if (instance_exists(oMonster))
+  {
+    draw_text(oMonster.x, oMonster.y+text_offset, "state: " + string(oMonster.state));
+  }
 }
 
 
