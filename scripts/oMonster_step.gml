@@ -56,6 +56,7 @@ if (state == NORM)
   }
   // if wait less than 0 AND can see oHero AND eyeline isn't blocked by a collidable
   else if (wait < 0 && vision_rect && !obstacle_rect)
+  // else if (vision_rect && !obstacle_rect)
   {
     state = ATTACK;
     ani("shoot");

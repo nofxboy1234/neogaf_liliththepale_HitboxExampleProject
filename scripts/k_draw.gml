@@ -178,10 +178,19 @@ if (debug) {
   draw_text(oHero.x, oHero.y+(16*16)+text_offset, "animation: " + string(oHero.animation));
 
   // Draw oMonster properties
-  text_offset = -50;
+  text_offset = 0;
   if (instance_exists(oMonster))
   {
     draw_text(oMonster.x, oMonster.y+text_offset, "state: " + string(oMonster.state));
+  }
+
+  // Draw oFireball properties
+  text_offset = 0;
+  if (instance_exists(oFireball))
+  {
+    draw_text(oFireball.x, oFireball.y+text_offset, "dx: " + string(oFireball.dx));
+    draw_text(oFireball.x, oFireball.y+(1*16)+text_offset, "dy: " + string(oFireball.dy));
+    draw_text(oFireball.x, oFireball.y+(2*16)+text_offset, "ddy: " + string(oFireball.ddy));
   }
 }
 

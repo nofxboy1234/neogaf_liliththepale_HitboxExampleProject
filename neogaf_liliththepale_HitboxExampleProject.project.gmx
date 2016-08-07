@@ -62,6 +62,7 @@
     <script>scripts\oFireball_user_def_03.gml</script>
     <script>scripts\oFireball_user_def_04.gml</script>
     <script>scripts\oHero_user_def_03.gml</script>
+    <script>scripts\oPause_end_step.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\k</object>
@@ -75,6 +76,7 @@
     <object>objects\oSpikes</object>
     <object>objects\oSplat</object>
     <object>objects\oFireball</object>
+    <object>objects\oPause</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
