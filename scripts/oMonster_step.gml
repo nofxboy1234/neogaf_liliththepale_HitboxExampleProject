@@ -3,59 +3,59 @@ if (state == NORM)
   x += image_xscale*2;
   wait--;
 
-  c_object_01_x1 = x;
-  c_object_01_y1 = y-150;
-  c_object_01_x2 =  x+image_xscale*50;
-  c_object_01_y2 = y-10;
+  h_col_rect_front_x1 = x;
+  h_col_rect_front_y1 = y-150;
+  h_col_rect_front_x2 =  x+image_xscale*50;
+  h_col_rect_front_y2 = y-10;
 
-  c_object_01 = collision_rectangle(c_object_01_x1, c_object_01_y1,
-                                    c_object_01_x2, c_object_01_y2,
+  h_col_rect_front = collision_rectangle(h_col_rect_front_x1, h_col_rect_front_y1,
+                                    h_col_rect_front_x2, h_col_rect_front_y2,
                                     c, false, false);
 
-  c_object_02_x1 = x+image_xscale*40;
-  c_object_02_y1 = y;
-  c_object_02_x2 = x+image_xscale*50;
-  c_object_02_y2 = y+10;
+  floor_col_rect_x1 = x+image_xscale*40;
+  floor_col_rect_y1 = y;
+  floor_col_rect_x2 = x+image_xscale*50;
+  floor_col_rect_y2 = y+10;
 
-  c_object_02 = collision_rectangle(c_object_02_x1, c_object_02_y1,
-                                    c_object_02_x2, c_object_02_y2,
+  floor_col_rect = collision_rectangle(floor_col_rect_x1, floor_col_rect_y1,
+                                    floor_col_rect_x2, floor_col_rect_y2,
                                     c, false, false);
 
-  c_object_03_x1 = x;
-  c_object_03_y1 = y-92;
-  c_object_03_x2 = x+image_xscale*500;
-  c_object_03_y2 = y-88;
+  vision_rect_x1 = x;
+  vision_rect_y1 = y-92;
+  vision_rect_x2 = x+image_xscale*500;
+  vision_rect_y2 = y-88;
 
-  c_object_03 = collision_rectangle(c_object_03_x1, c_object_03_y1,
-                                    c_object_03_x2, c_object_03_y2,
+  vision_rect = collision_rectangle(vision_rect_x1, vision_rect_y1,
+                                    vision_rect_x2, vision_rect_y2,
                                     oHero.myHurtbox, false, false);
 
-  c_object_04_x1 = x;
-  c_object_04_y1 = y-92;
-  c_object_04_x2 = oHero.x;
-  c_object_04_y2 = y-88;
+  obstacle_rect_x1 = x;
+  obstacle_rect_y1 = y-92;
+  obstacle_rect_x2 = oHero.x;
+  obstacle_rect_y2 = y-88;
 
-  c_object_04 = collision_rectangle(c_object_04_x1, c_object_04_y1,
-                                    c_object_04_x2, c_object_04_y2,
+  obstacle_rect = collision_rectangle(obstacle_rect_x1, obstacle_rect_y1,
+                                    obstacle_rect_x2, obstacle_rect_y2,
                                     c, false, false);
 
-  c_object_05_x1 = x;
-  c_object_05_y1 = y-150;
-  c_object_05_x2 = x-image_xscale*50;
-  c_object_05_y2 = y-10;
+  h_col_rect_back_x1 = x;
+  h_col_rect_back_y1 = y-150;
+  h_col_rect_back_x2 = x-image_xscale*50;
+  h_col_rect_back_y2 = y-10;
 
-  c_object_05 = collision_rectangle(c_object_05_x1, c_object_05_y1,
-                                    c_object_05_x2, c_object_05_y2,
+  h_col_rect_back = collision_rectangle(h_col_rect_back_x1, h_col_rect_back_y1,
+                                    h_col_rect_back_x2, h_col_rect_back_y2,
                                     c, false, false);
 
   // if horiz collision OR (wait is less than 0 AND at the edge of a platform AND direction == image_xscale)
-  if (c_object_01 || (wait < 0 && !c_object_02 && sign(x-xstart) == image_xscale))
+  if (h_col_rect_front || (wait < 0 && !floor_col_rect && sign(x-xstart) == image_xscale))
   {
     // flip direction horizontally
     image_xscale *= -1;
   }
   // if wait less than 0 AND can see oHero AND eyeline isn't blocked by a collidable
-  else if (wait < 0 && c_object_03 && !c_object_04)
+  else if (wait < 0 && vision_rect && !obstacle_rect)
   {
     state = ATTACK;
     ani("shoot");
@@ -66,7 +66,7 @@ else if (state == STUN)
   // knock back in x slightly
   x -= image_xscale*10/(1+image_index);
   // if back half collision box is hitting a collidable object
-  if (c_object_05)
+  if (h_col_rect_back)
   {
     // goto x pos on previous frame
     x = xprevious;

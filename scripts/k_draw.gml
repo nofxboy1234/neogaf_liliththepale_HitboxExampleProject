@@ -50,35 +50,35 @@ if (debug) {
     {
       draw_set_color(c_yellow);
       draw_set_alpha(0.2);
-      draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, false);
+      draw_rectangle(h_col_rect_front_x1, h_col_rect_front_y1, h_col_rect_front_x2, h_col_rect_front_y2, false);
       draw_set_alpha(1.0);
-      draw_rectangle(c_object_01_x1, c_object_01_y1, c_object_01_x2, c_object_01_y2, true);
+      draw_rectangle(h_col_rect_front_x1, h_col_rect_front_y1, h_col_rect_front_x2, h_col_rect_front_y2, true);
 
       draw_set_color(c_teal);
       draw_set_alpha(0.2);
-      draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, false);
+      draw_rectangle(floor_col_rect_x1, floor_col_rect_y1, floor_col_rect_x2, floor_col_rect_y2, false);
       draw_set_alpha(1.0);
-      draw_rectangle(c_object_02_x1, c_object_02_y1, c_object_02_x2, c_object_02_y2, true);
+      draw_rectangle(floor_col_rect_x1, floor_col_rect_y1, floor_col_rect_x2, floor_col_rect_y2, true);
 
       draw_set_color(c_lime);
       draw_set_alpha(0.2);
-      draw_rectangle(c_object_03_x1, c_object_03_y1, c_object_03_x2, c_object_03_y2, false);
+      draw_rectangle(vision_rect_x1, vision_rect_y1, vision_rect_x2, vision_rect_y2, false);
       draw_set_alpha(1.0);
-      draw_rectangle(c_object_03_x1, c_object_03_y1, c_object_03_x2, c_object_03_y2, true);
+      draw_rectangle(vision_rect_x1, vision_rect_y1, vision_rect_x2, vision_rect_y2, true);
 
-      draw_set_color(c_maroon);
-      draw_set_alpha(0.2);
-      draw_rectangle(c_object_04_x1, c_object_04_y1, c_object_04_x2, c_object_04_y2, false);
-      draw_set_alpha(1.0);
-      draw_rectangle(c_object_04_x1, c_object_04_y1, c_object_04_x2, c_object_04_y2, true);
+      // draw_set_color(c_maroon);
+      // draw_set_alpha(0.2);
+      // draw_rectangle(obstacle_rect_x1, obstacle_rect_y1, obstacle_rect_x2, obstacle_rect_y2, false);
+      // draw_set_alpha(1.0);
+      // draw_rectangle(obstacle_rect_x1, obstacle_rect_y1, obstacle_rect_x2, obstacle_rect_y2, true);
 
       draw_set_color(c_fuchsia);
       draw_set_alpha(0.2);
-      draw_rectangle(c_object_05_x1, c_object_05_y1, c_object_05_x2, c_object_05_y2, false);
+      draw_rectangle(h_col_rect_back_x1, h_col_rect_back_y1, h_col_rect_back_x2, h_col_rect_back_y2, false);
       draw_set_alpha(1.0);
-      draw_rectangle(c_object_05_x1, c_object_05_y1, c_object_05_x2, c_object_05_y2, true);
+      draw_rectangle(h_col_rect_back_x1, h_col_rect_back_y1, h_col_rect_back_x2, h_col_rect_back_y2, true);
 
-      with (c_object_01)
+      with (h_col_rect_front)
       {
         draw_set_color(c_yellow);
         draw_set_alpha(0.2);
@@ -87,7 +87,7 @@ if (debug) {
         draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
       }
 
-      with (c_object_02)
+      with (floor_col_rect)
       {
         draw_set_color(c_teal);
         draw_set_alpha(0.2);
@@ -95,7 +95,7 @@ if (debug) {
         draw_set_alpha(1);
         draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
       }
-      with (c_object_03)
+      with (vision_rect)
       {
         draw_set_color(c_lime);
         draw_set_alpha(0.2);
@@ -103,15 +103,15 @@ if (debug) {
         draw_set_alpha(1);
         draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
       }
-      with (c_object_04)
-      {
-        draw_set_color(c_maroon);
-        draw_set_alpha(0.2);
-        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
-        draw_set_alpha(1);
-        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
-      }
-      with (c_object_05)
+      // with (obstacle_rect)
+      // {
+      //   draw_set_color(c_maroon);
+      //   draw_set_alpha(0.2);
+      //   draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
+      //   draw_set_alpha(1);
+      //   draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+      // }
+      with (h_col_rect_back)
       {
         draw_set_color(c_fuchsia);
         draw_set_alpha(0.2);
